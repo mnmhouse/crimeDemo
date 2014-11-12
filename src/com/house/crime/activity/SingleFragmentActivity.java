@@ -4,17 +4,18 @@ import com.house.crime.R;
 import com.house.crime.view.ListCrimeFragment;
 
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 
-public abstract class SingleFragmentActivity extends Activity {
+public abstract class SingleFragmentActivity extends FragmentActivity {
   public abstract Fragment createFragment();
   protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fragmet);
-		 FragmentManager fm = getFragmentManager();
+		 FragmentManager fm = getSupportFragmentManager();
 		
 		Fragment fragment = fm.findFragmentById(R.id.fragmentContainer);
 		if(fragment == null){

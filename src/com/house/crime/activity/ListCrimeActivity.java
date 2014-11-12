@@ -5,9 +5,9 @@ import com.house.crime.view.CrimeFragment;
 import com.house.crime.view.ListCrimeFragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.widget.ArrayAdapter;
 
 public class ListCrimeActivity extends SingleFragmentActivity {
